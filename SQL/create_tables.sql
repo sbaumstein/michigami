@@ -4,7 +4,8 @@ CREATE TABLE football (
     OpponentName VARCHAR(256) NOT NULL,
     EventType VARCHAR(256) NOT NULL,
     ConferenceGame VARCHAR(256) NOT NULL,
-    PRIMARY KEY(MichiganScore, OpponentScore)
+    GameDate DATETIME NOT NULL,
+    PRIMARY KEY(GameDate)
 );
 
 CREATE TABLE basketball (
@@ -13,6 +14,7 @@ CREATE TABLE basketball (
     OpponentName VARCHAR(256) NOT NULL,
     EventType VARCHAR(256) NOT NULL,
     ConferenceGame VARCHAR(256) NOT NULL,
-    PRIMARY KEY(MichiganScore, OpponentScore)
+    GameDate DATETIME NOT NULL,
+    PRIMARY KEY(GameDate)
 );
 

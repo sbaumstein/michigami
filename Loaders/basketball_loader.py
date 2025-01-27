@@ -10,12 +10,11 @@ def scrape_football_scores():
         # Scraping logic goes here
         pass
 
-
         # Insert example data into basketball
-        cursor.execute("""
-        INSERT INTO basketball (MichiganScore, OpponentScore, OpponentName, EventType)
-        VALUES (?, ?, ?, ?)
-        """, (82, 76, "Indiana", "Tournament"))
+        #cursor.execute("""
+        #INSERT INTO basketball (MichiganScore, OpponentScore, OpponentName, EventType)
+        #VALUES (?, ?, ?, ?)
+        #""", (82, 76, "Indiana", "Tournament"))
 
     # Commit and close
     connection.commit()

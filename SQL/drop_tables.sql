@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS football;
+DROP TABLE IF EXISTS basketball;
