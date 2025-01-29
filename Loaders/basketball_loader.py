@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import requests
 import re
 from datetime import datetime
+import time
+from random import randint
 
 def scrape_historical():
     """ Scrapes all historical basketball data """
@@ -14,9 +16,13 @@ def scrape_historical():
     event_types["NCAA"] = "NCAA Tourney"
     event_types["NIT"] = "NIT Tourney"
     # scraping basketball data from 1950-2025
-    for i in range(1950, 2025):
+    for i in range(1950, 2026):
         url = f'https://www.sports-reference.com/cbb/schools/michigan/men/{i}-schedule.html'
         res = requests.get(url)
+        time.sleep(randint(3, 12))
+        if res.status_code != 200:
+            print(f"Skipping {i}: {res.status_code}")
+            continue
         soup = BeautifulSoup(res.content, 'html.parser')
         games = soup.find_all('tr')
         season_data = {}
