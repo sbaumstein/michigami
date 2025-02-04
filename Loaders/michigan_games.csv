@@ -1,0 +1,628 @@
+Season,Date,Opponent Name,Michigan Score,Opponent Score,Event Type,Conference Game
+1909,1/9/1909,Michigan Agricultural,16,24,Regular Season,No
+1909,1/16/1909,Oberlin,27,25,Regular Season,No
+1909,2/20/1909,Michigan Agricultural,25,45,Regular Season,No
+1909,2/27/1909,Ohio State,22,29,Regular Season,No
+1909,3/6/1909,Ohio State,26,42,Regular Season,No
+1917-18,12/15/1917,Case,25,27,Regular Season,No
+1917-18,12/30/1917,Camp Custer,44,28,Regular Season,No
+1917-18,1/4/1918,Hope,31,15,Regular Season,No
+1917-18,1/5/1918,Case,24,20,Regular Season,No
+1917-18,1/11/1918,Michigan Agricultural,17,13,Regular Season,No
+1917-18,1/18/1918,Indiana,17,21,Regular Season,Yes
+1917-18,1/21/1918,Chicago,22,6,Regular Season,Yes
+1917-18,1/22/1918,Ohio State,7,37,Regular Season,Yes
+1917-18,1/25/1918,Minnesota,13,28,Regular Season,Yes
+1917-18,1/26/1918,Northwestern,21,11,Regular Season,Yes
+1917-18,2/11/1918,Great Lakes,27,34,Regular Season,No
+1917-18,2/13/1918,Kalamazoo,42,8,Regular Season,No
+1917-18,2/16/1918,Minnesota,10,49,Regular Season,Yes
+1917-18,2/22/1918,Indiana,20,21,Regular Season,Yes
+1917-18,2/23/1918,Northwestern,14,18,Regular Season,Yes
+1917-18,3/1/1918,Chicago,15,22,Regular Season,Yes
+1917-18,3/2/1918,Michigan Agricultural,31,25,Regular Season,No
+1917-18,3/9/1918,Ohio State,27,34,Regular Season,Yes
+1918-19,12/31/1918,Pontiac Oaklands,21,3,Regular Season,No
+1918-19,1/1/1919,Y.M.O. Detroit,29,10,Regular Season,No
+1918-19,1/2/1919,Detroit Law,23,15,Regular Season,No
+1918-19,1/4/1919,Fort Wayne Nationals,17,11,Regular Season,No
+1918-19,1/5/1919,Toledo,24,19,Regular Season,No
+1918-19,1/6/1919,Rayls,13,24,Regular Season,No
+1918-19,1/10/1919,Custer Officers,25,12,Regular Season,No
+1918-19,1/11/1919,St. Mary’s,30,19,Regular Season,No
+1918-19,1/17/1919,Detroit,39,18,Regular Season,No
+1918-19,1/18/1919,Kalamazoo,49,19,Regular Season,No
+1918-19,1/20/1919,Indiana,28,22,Regular Season,Yes
+1918-19,1/24/1919,Chicago,13,21,Regular Season,Yes
+1918-19,1/25/1919,Northwestern,16,17,Regular Season,Yes
+1918-19,1/29/1919,U.S. General Hospital,53,16,Regular Season,No
+1918-19,2/1/1919,Illinois,23,27,Regular Season,Yes
+1918-19,2/14/1919,Detroit Naval Station,67,7,Regular Season,No
+1918-19,2/15/1919,Michigan Agricultural,19,17,Regular Season,No
+1918-19,2/21/1919,Ohio State,38,20,Regular Season,Yes
+1918-19,2/22/1919,Chicago,22,25,Regular Season,Yes
+1918-19,2/28/1919,Michigan Agricultural,24,33,Regular Season,No
+1918-19,3/2/1919,Northwestern,24,22,Regular Season,Yes
+1918-19,3/8/1919,Ohio State,23,20,Regular Season,Yes
+1918-19,3/10/1919,Illinois,22,18,Regular Season,Yes
+1918-19,3/11/1919,Indiana,16,24,Regular Season,Yes
+1919-20,12/31/1919,Oakland Motor Co.,20,9,Regular Season,No
+1919-20,1/1/1920,A.C. Spark Plugs,34,15,Regular Season,No
+1919-20,1/4/1920,Detroit Athletic Club,36,17,Regular Season,No
+1919-20,1/3/1920,Rayls,14,19,Regular Season,No
+1919-20,1/24/1920,Chicago,22,40,Regular Season,Yes
+1919-20,1/26/1920,Illinois,18,41,Regular Season,Yes
+1919-20,2/14/1920,Wisconsin,13,40,Regular Season,Yes
+1919-20,2/28/1920,Michigan Agricultural,27,34,Regular Season,No
+1919-20,3/13/1920,Ohio State,20,34,Regular Season,Yes
+1919-20,3/16/1920,Indiana,18,19,Regular Season,Yes
+1919-20,12/13/1919,Kalamazoo,22,12,Regular Season,No
+1919-20,12/18/1919,St. Mary’s,34,22,Regular Season,No
+1919-20,1/11/1920,Hillsdale,22,18,Regular Season,No
+1919-20,1/16/1920,Western Reserve,33,13,Regular Season,No
+1919-20,3/6/1920,Wisconsin,23,19,Regular Season,Yes
+1919-20,3/8/1920,Minnesota,30,16,Regular Season,Yes
+1919-20,12/19/1919,Western State,14,27,Regular Season,No
+1919-20,1/17/1920,Indiana,22,9,Regular Season,Yes
+1919-20,1/30/1920,Michigan Agricultural,13,23,Regular Season,No
+1919-20,1/31/1920,Ohio State,18,30,Regular Season,Yes
+1919-20,2/21/1920,Chicago,19,31,Regular Season,Yes
+1919-20,3/1/1920,Illinois,21,28,Regular Season,Yes
+1920-21,12/10/1920,Kalamazoo,44,32,Regular Season,No
+1920-21,12/18/1920,Western State,26,12,Regular Season,No
+1920-21,12/27/1920,Louisville YMHA,32,18,Regular Season,No
+1920-21,12/28/1920,Nashville,28,16,Regular Season,No
+1920-21,12/29/1920,Jonesboro,24,16,Regular Season,No
+1920-21,12/30/1920,Memphis YMCA,14,11,Regular Season,No
+1920-21,12/31/1920,Nashville,28,11,Regular Season,No
+1920-21,1/1/1921,Vanderbilt,21,7,Regular Season,No
+1920-21,1/8/1921,Wisconsin,24,27,Regular Season,Yes
+1920-21,1/10/1921,Indiana,21,30,Regular Season,Yes
+1920-21,1/15/1921,Ohio State,22,10,Regular Season,Yes
+1920-21,1/21/1921,Iowa,19,15,Regular Season,Yes
+1920-21,1/22/1921,Northwestern,30,15,Regular Season,Yes
+1920-21,1/24/1921,Wisconsin,17,25,Regular Season,Yes
+1920-21,1/29/1921,Chicago,16,14,Regular Season,Yes
+1920-21,1/31/1921,Purdue,27,23,Regular Season,Yes
+1920-21,2/5/1921,Michigan Agricultural,37,24,Regular Season,No
+1920-21,2/22/1921,Michigan Agricultural,17,10,Regular Season,No
+1920-21,2/26/1921,Illinois,24,18,Regular Season,Yes
+1920-21,2/28/1921,Purdue,19,15,Regular Season,Yes
+1920-21,3/5/1921,Ohio State,36,22,Regular Season,Yes
+1920-21,3/7/1921,Illinois,26,24,Regular Season,Yes
+1921-22,12/9/1921,Western State,26,15,Regular Season,No
+1921-22,12/16/1921,Cincinnati,25,18,Regular Season,No
+1921-22,12/17/1921,Case,29,20,Regular Season,No
+1921-22,12/30/1921,Carnegie Tech,36,15,Regular Season,No
+1921-22,12/31/1921,Carnegie Tech,48,22,Regular Season,No
+1921-22,1/6/1922,Michigan Agricultural,27,26,Regular Season,No
+1921-22,1/9/1922,Ohio State,22,25,Regular Season,Yes
+1921-22,1/10/1922,Chicago,21,16,Regular Season,Yes
+1921-22,1/14/1922,Wisconsin,16,18,Regular Season,Yes
+1921-22,1/16/1922,Illinois,17,20,Regular Season,Yes
+1921-22,2/11/1922,Ohio State,38,17,Regular Season,Yes
+1921-22,2/13/1922,Indiana,14,15,Regular Season,Yes
+1921-22,2/18/1922,Wisconsin,18,17,Regular Season,Yes
+1921-22,2/20/1922,Indiana,24,16,Regular Season,Yes
+1921-22,2/22/1922,Michigan Agricultural,19,17,Regular Season,No
+1921-22,2/25/1922,Illinois,42,16,Regular Season,Yes
+1921-22,2/27/1922,Iowa,22,20,Regular Season,Yes
+1921-22,3/4/1922,Iowa,25,19,Regular Season,Yes
+1921-22,3/6/1922,Northwestern,29,19,Regular Season,Yes
+1922-23,1/13/1923,Minnesota,32,11,Regular Season,Yes
+1922-23,1/20/1923,Michigan Agricultural,29,13,Regular Season,No
+1922-23,2/17/1923,Northwestern,27,13,Regular Season,Yes
+1922-23,2/22/1923,Ohio State,39,14,Regular Season,Yes
+1922-23,2/26/1923,Illinois,27,20,Regular Season,Yes
+1922-23,1/15/1923,Iowa,17,18,Regular Season,Yes
+1922-23,2/19/1923,Wisconsin,16,10,Regular Season,Yes
+1922-23,12/8/1922,Notre Dame,41,23,Regular Season,No
+1922-23,1/3/1923,Michigan Agricultural,33,11,Regular Season,No
+1922-23,1/6/1923,Illinois,30,13,Regular Season,Yes
+1922-23,1/22/1923,Northwestern,16,10,Regular Season,Yes
+1922-23,1/27/1923,Ohio State,49,25,Regular Season,Yes
+1922-23,2/12/1923,Minnesota,34,18,Regular Season,Yes
+1922-23,2/14/1923,Wisconsin,14,18,Regular Season,Yes
+1922-23,3/3/1923,Iowa,18,19,Regular Season,Yes
+1923-24,12/14/1923,Cincinnati,24,14,Regular Season,No
+1923-24,12/15/1923,Louisville YMHA,32,19,Regular Season,No
+1923-24,1/5/1924,Notre Dame,25,29,Regular Season,No
+1923-24,1/11/1924,Michigan Agricultural,23,19,Regular Season,No
+1923-24,1/14/1924,Illinois,24,23,Regular Season,Yes
+1923-24,1/19/1924,Iowa,23,18,Regular Season,Yes
+1923-24,1/26/1924,Minnesota,32,31,Regular Season,Yes
+1923-24,2/6/1924,Michigan Agricultural,31,20,Regular Season,No
+1923-24,2/9/1924,Chicago,18,20,Regular Season,Yes
+1923-24,2/11/1924,Minnesota,16,27,Regular Season,Yes
+1923-24,2/16/1924,Purdue,34,20,Regular Season,Yes
+1923-24,2/18/1924,Indiana,22,23,Regular Season,Yes
+1923-24,2/23/1924,Purdue,20,24,Regular Season,Yes
+1923-24,2/25/1924,Iowa,27,25,Regular Season,Yes
+1923-24,3/1/1924,Chicago,24,23,Regular Season,Yes
+1923-24,3/3/1924,Indiana,20,31,Regular Season,Yes
+1923-24,3/8/1924,Illinois,20,23,Regular Season,Yes
+1924-25,12/13/1924,Michigan Agricultural,26,10,Regular Season,No
+1924-25,12/20/1924,Kentucky,21,11,Regular Season,No
+1924-25,1/2/1925,Navy,29,31,Regular Season,No
+1924-25,1/10/1925,Northwestern,29,16,Regular Season,Yes
+1924-25,1/14/1925,Purdue,36,37,Regular Season,Yes
+1924-25,1/17/1925,Ohio State,39,29,Regular Season,Yes
+1924-25,1/19/1925,Wisconsin,14,12,Regular Season,Yes
+1924-25,2/7/1925,Chicago,19,20,Regular Season,Yes
+1924-25,2/9/1925,Northwestern,17,16,Regular Season,Yes
+1924-25,2/14/1925,Indiana,28,29,Regular Season,Yes
+1924-25,2/16/1925,Ohio State,13,32,Regular Season,Yes
+1924-25,2/20/1925,Wisconsin,27,16,Regular Season,Yes
+1924-25,3/2/1925,Indiana,33,51,Regular Season,Yes
+1924-25,3/7/1925,Chicago,47,14,Regular Season,Yes
+1925-26,12/12/1925,Ohio Wesleyan,32,27,Regular Season,No
+1925-26,12/17/1925,Pittsburgh,34,25,Regular Season,No
+1925-26,1/2/1926,Missouri,27,19,Regular Season,No
+1925-26,1/9/1926,Northwestern,32,30,Regular Season,Yes
+1925-26,1/11/1926,Iowa,22,16,Regular Season,Yes
+1925-26,1/16/1926,Michigan State,38,15,Regular Season,No
+1925-26,1/18/1926,Illinois,29,31,Regular Season,Yes
+1925-26,2/6/1926,Syracuse,32,36,Regular Season,No
+1925-26,2/8/1926,Minnesota,33,22,Regular Season,Yes
+1925-26,2/13/1926,Iowa,21,24,Regular Season,Yes
+1925-26,2/15/1926,Minnesota,17,28,Regular Season,Yes
+1925-26,2/20/1926,Ohio State,31,32,Regular Season,Yes
+1925-26,2/22/1926,Wisconsin,22,13,Regular Season,Yes
+1925-26,2/26/1926,Illinois,33,24,Regular Season,Yes
+1925-26,3/1/1926,Wisconsin,24,23,Regular Season,Yes
+1925-26,3/6/1926,Ohio State,44,28,Regular Season,Yes
+1925-26,3/8/1926,Northwestern,46,14,Regular Season,Yes
+1926-27,12/11/1926,Michigan State,34,13,Regular Season,No
+1926-27,12/17/1926,Cornell,30,23,Regular Season,No
+1926-27,1/1/1927,Syracuse,31,27,Regular Season,No
+1926-27,1/4/1927,Maryland,39,25,Regular Season,No
+1926-27,1/8/1927,Minnesota,31,20,Regular Season,Yes
+1926-27,1/15/1927,Iowa,41,22,Regular Season,Yes
+1926-27,1/17/1927,Illinois,25,24,Regular Season,Yes
+1926-27,1/22/1927,Indiana,31,27,Regular Season,Yes
+1926-27,1/24/1927,Minnesota,32,20,Regular Season,Yes
+1926-27,2/12/1927,Pittsburgh,23,35,Regular Season,No
+1926-27,2/15/1927,Purdue,32,37,Regular Season,Yes
+1926-27,2/19/1927,Indiana,34,37,Regular Season,Yes
+1926-27,2/22/1927,Chicago,51,25,Regular Season,Yes
+1926-27,2/25/1927,Illinois,30,26,Regular Season,Yes
+1926-27,2/28/1927,Purdue,42,20,Regular Season,Yes
+1926-27,3/5/1927,Chicago,34,15,Regular Season,Yes
+1926-27,3/7/1927,Iowa,31,29,Regular Season,Yes
+1927-28,12/10/1927,Michigan State,43,23,Regular Season,No
+1927-28,12/15/1927,Pittsburgh,39,49,Regular Season,No
+1927-28,12/21/1927,Penn,36,39,Regular Season,No
+1927-28,1/3/1928,Bradley,46,30,Regular Season,No
+1927-28,1/7/1928,Northwestern,20,25,Regular Season,Yes
+1927-28,1/9/1928,Wisconsin,22,26,Regular Season,Yes
+1927-28,1/14/1928,Indiana,42,41,Regular Season,Yes
+1927-28,1/16/1928,Ohio State,41,21,Regular Season,Yes
+1927-28,2/4/1928,Chicago,28,19,Regular Season,Yes
+1927-28,2/6/1928,Coe,31,25,Regular Season,No
+1927-28,2/11/1928,Purdue,26,35,Regular Season,Yes
+1927-28,2/13/1928,Chicago,26,23,Regular Season,Yes
+1927-28,2/20/1928,Purdue,33,55,Regular Season,Yes
+1927-28,2/25/1928,Northwestern,47,25,Regular Season,Yes
+1927-28,2/27/1928,Ohio State,45,39,Regular Season,Yes
+1927-28,3/3/1928,Indiana,34,36,Regular Season,Yes
+1927-28,3/5/1928,Wisconsin,42,19,Regular Season,Yes
+1928-29,12/7/1928,Michigan State,24,31,Regular Season,No
+1928-29,12/15/1928,Penn,34,21,Regular Season,No
+1928-29,1/1/1929,Penn State,31,11,Regular Season,No
+1928-29,1/2/1929,Cornell,45,13,Regular Season,No
+1928-29,1/5/1929,Northwestern,32,20,Regular Season,Yes
+1928-29,1/7/1929,Wisconsin,31,23,Regular Season,Yes
+1928-29,1/12/1929,Iowa,36,25,Regular Season,Yes
+1928-29,1/14/1929,Illinois,21,17,Regular Season,Yes
+1928-29,2/9/1929,Ohio State,34,24,Regular Season,Yes
+1928-29,2/11/1929,Northwestern,23,24,Regular Season,Yes
+1928-29,2/16/1929,Minnesota,23,18,Regular Season,Yes
+1928-29,2/18/1929,Illinois,24,27,Regular Season,Yes
+1928-29,2/23/1929,Iowa,25,18,Regular Season,Yes
+1928-29,2/25/1929,Minnesota,28,19,Regular Season,Yes
+1928-29,3/2/1929,Ohio State,27,26,Regular Season,Yes
+1928-29,3/4/1929,Wisconsin,37,22,Regular Season,Yes
+1929-30,12/9/1929,Ohio Wesleyan,33,16,Regular Season,No
+1929-30,12/14/1929,Penn,27,24,Regular Season,No
+1929-30,12/20/1929,Albion,51,9,Regular Season,No
+1929-30,1/6/1930,Minnesota,32,17,Regular Season,Yes
+1929-30,1/11/1930,Purdue,19,23,Regular Season,Yes
+1929-30,1/13/1930,Illinois,18,24,Regular Season,Yes
+1929-30,1/20/1930,Indiana,45,26,Regular Season,Yes
+1929-30,1/27/1930,Minnesota,26,13,Regular Season,Yes
+1929-30,1/30/1930,Chicago,29,16,Regular Season,Yes
+1929-30,2/15/1930,Michigan State,26,27,Regular Season,No
+1929-30,2/22/1930,Indiana,21,18,Regular Season,Yes
+1929-30,2/25/1930,Chicago,30,15,Regular Season,Yes
+1929-30,3/1/1930,Illinois,17,30,Regular Season,Yes
+1929-30,3/3/1930,Purdue,28,44,Regular Season,Yes
+1930-31,12/6/1930,Western State,33,27,Regular Season,No
+1930-31,12/13/1930,Michigan State,32,22,Regular Season,No
+1930-31,12/20/1930,Penn,46,22,Regular Season,No
+1930-31,12/31/1930,Ohio Wesleyan,46,19,Regular Season,No
+1930-31,1/6/1931,Purdue,29,22,Regular Season,Yes
+1930-31,1/10/1931,Northwestern,22,27,Regular Season,Yes
+1930-31,1/12/1931,Wisconsin,23,17,Regular Season,Yes
+1930-31,1/17/1931,Ohio State,16,22,Regular Season,Yes
+1930-31,1/19/1931,Northwestern,21,26,Regular Season,Yes
+1930-31,1/24/1931,Chicago,41,15,Regular Season,Yes
+1930-31,1/26/1931,Ohio State,40,22,Regular Season,Yes
+1930-31,2/16/1931,Michigan Normal,46,8,Regular Season,No
+1930-31,2/21/1931,Indiana,33,24,Regular Season,Yes
+1930-31,2/23/1931,Purdue,21,30,Regular Season,Yes
+1930-31,2/28/1931,Wisconsin,26,15,Regular Season,Yes
+1930-31,3/7/1931,Indiana,21,20,Regular Season,Yes
+1930-31,3/9/1931,Chicago,29,15,Regular Season,Yes
+1931-32,12/7/1931,Western State,33,27,Regular Season,No
+1931-32,12/12/1931,Michigan State,27,5,Regular Season,No
+1931-32,12/19/1931,Mount Union,19,16,Regular Season,No
+1931-32,1/2/1932,Syracuse,30,33,Regular Season,No
+1931-32,1/9/1932,Wisconsin,24,18,Regular Season,Yes
+1931-32,1/11/1932,Minnesota,30,25,Regular Season,Yes
+1931-32,1/16/1932,Northwestern,20,21,Regular Season,Yes
+1931-32,1/18/1932,Illinois,28,16,Regular Season,Yes
+1931-32,1/23/1932,Minnesota,26,30,Regular Season,Yes
+1931-32,1/28/1932,Ohio State,38,25,Regular Season,Yes
+1931-32,2/13/1932,Michigan State,13,14,Regular Season,No
+1931-32,2/15/1932,Iowa,41,22,Regular Season,Yes
+1931-32,2/20/1932,Illinois,23,29,Regular Season,Yes
+1931-32,2/22/1932,Northwestern,26,30,Regular Season,Yes
+1931-32,2/27/1932,Iowa,35,27,Regular Season,Yes
+1931-32,2/29/1932,Wisconsin,33,13,Regular Season,Yes
+1931-32,3/7/1932,Ohio State,30,27,Regular Season,Yes
+1932-33,12/5/1932,Western State,31,37,Regular Season,No
+1932-33,12/10/1932,Michigan State,17,20,Regular Season,No
+1932-33,12/15/1932,Mount Union,36,27,Regular Season,No
+1932-33,12/17/1932,Western State,23,30,Regular Season,No
+1932-33,1/2/1933,Syracuse,28,31,Regular Season,No
+1932-33,1/7/1933,Iowa,33,25,Regular Season,Yes
+1932-33,1/9/1933,Illinois,17,22,Regular Season,Yes
+1932-33,1/14/1933,Illinois,35,30,Regular Season,Yes
+1932-33,1/21/1933,Chicago,36,18,Regular Season,Yes
+1932-33,1/23/1933,Minnesota,34,22,Regular Season,Yes
+1932-33,2/11/1933,Michigan State,28,16,Regular Season,No
+1932-33,2/13/1933,Indiana,32,25,Regular Season,Yes
+1932-33,2/16/1933,Iowa,35,36,Regular Season,Yes
+1932-33,2/20/1933,Chicago,35,10,Regular Season,Yes
+1932-33,2/25/1933,Purdue,33,37,Regular Season,Yes
+1932-33,2/27/1933,Minnesota,21,18,Regular Season,Yes
+1932-33,3/4/1933,Indiana,30,31,Regular Season,Yes
+1932-33,3/6/1933,Purdue,27,22,Regular Season,Yes
+1933-34,12/4/1933,Western State,24,11,Regular Season,No
+1933-34,12/9/1933,Michigan State,25,26,Regular Season,No
+1933-34,12/16/1933,Penn,25,32,Regular Season,No
+1933-34,12/18/1933,Maryland,25,29,Regular Season,No
+1933-34,12/20/1933,Rutgers,32,22,Regular Season,No
+1933-34,12/21/1933,Temple,32,42,Regular Season,No
+1933-34,1/3/1934,Michigan Normal,29,11,Regular Season,No
+1933-34,1/6/1934,Indiana,18,29,Regular Season,Yes
+1933-34,1/8/1934,Chicago,34,18,Regular Season,Yes
+1933-34,1/13/1934,Wisconsin,23,34,Regular Season,Yes
+1933-34,1/15/1934,Northwestern,23,44,Regular Season,Yes
+1933-34,1/20/1934,Chicago,22,35,Regular Season,Yes
+1933-34,1/26/1934,Ohio State,32,28,Regular Season,Yes
+1933-34,2/10/1934,Michigan State,26,33,Regular Season,No
+1933-34,2/12/1934,Purdue,20,51,Regular Season,Yes
+1933-34,2/17/1934,Ohio State,26,20,Regular Season,Yes
+1933-34,2/19/1934,Wisconsin,26,32,Regular Season,Yes
+1933-34,2/24/1934,Purdue,33,60,Regular Season,Yes
+1933-34,2/26/1934,Northwestern,25,29,Regular Season,Yes
+1933-34,3/5/1934,Indiana,35,32,Regular Season,Yes
+1934-35,12/1/1934,Calvin,25,22,Regular Season,No
+1934-35,12/8/1934,Michigan Normal,27,26,Regular Season,No
+1934-35,12/15/1934,Michigan State,31,25,Regular Season,No
+1934-35,12/19/1934,Western State,26,25,Regular Season,No
+1934-35,1/2/1935,Syracuse,23,44,Regular Season,No
+1934-35,1/3/1935,Colgate,44,41,Regular Season,No
+1934-35,1/4/1935,Buffalo,41,21,Regular Season,No
+1934-35,1/7/1935,Ohio State,30,33,Regular Season,Yes
+1934-35,1/12/1935,Minnesota,24,31,Regular Season,Yes
+1934-35,1/14/1935,Wisconsin,20,34,Regular Season,Yes
+1934-35,1/19/1935,Illinois,22,34,Regular Season,Yes
+1934-35,1/21/1935,Northwestern,19,11,Regular Season,Yes
+1934-35,2/9/1935,Michigan State,28,30,Regular Season,No
+1934-35,2/11/1935,Minnesota,26,29,Regular Season,Yes
+1934-35,2/16/1935,Iowa,29,27,Regular Season,Yes
+1934-35,2/18/1935,Northwestern,16,26,Regular Season,Yes
+1934-35,2/23/1935,Wisconsin,19,33,Regular Season,Yes
+1934-35,2/25/1935,Iowa,25,37,Regular Season,Yes
+1934-35,3/2/1935,Ohio State,28,30,Regular Season,Yes
+1934-35,3/4/1935,Illinois,22,36,Regular Season,Yes
+1935-36,12/2/1935,Calvin,42,27,Regular Season,No
+1935-36,12/7/1935,Michigan Normal,37,17,Regular Season,No
+1935-36,12/14/1935,Michigan State,35,24,Regular Season,No
+1935-36,12/20/1935,Mount Union,40,22,Regular Season,No
+1935-36,12/21/1935,Western Reserve,28,23,Regular Season,No
+1935-36,1/2/1936,Butler,26,23,Regular Season,No
+1935-36,1/3/1936,Toledo,33,32,Regular Season,No
+1935-36,1/6/1936,Indiana,27,33,Regular Season,Yes
+1935-36,1/11/1936,Minnesota,38,28,Regular Season,Yes
+1935-36,1/13/1936,Purdue,32,41,Regular Season,Yes
+1935-36,1/18/1936,Chicago,51,33,Regular Season,Yes
+1935-36,1/20/1936,Iowa,31,27,Regular Season,Yes
+1935-36,1/25/1936,Minnesota,26,31,Regular Season,Yes
+1935-36,1/27/1936,Chicago,45,22,Regular Season,Yes
+1935-36,2/15/1936,Michigan State,41,23,Regular Season,No
+1935-36,2/17/1936,Indiana,23,37,Regular Season,Yes
+1935-36,2/22/1936,Iowa,31,25,Regular Season,Yes
+1935-36,2/24/1936,Illinois,42,37,Regular Season,Yes
+1935-36,3/2/1936,Illinois,35,22,Regular Season,Yes
+1935-36,3/7/1936,Purdue,37,38,Regular Season,Yes
+1936-37,12/7/1936,Michigan Normal,61,12,Regular Season,No
+1936-37,12/12/1936,Michigan State,34,21,Regular Season,No
+1936-37,12/21/1936,Washington,23,40,Regular Season,No
+1936-37,12/22/1936,Washington,34,32,Regular Season,No
+1936-37,12/23/1936,Washington,39,33,Regular Season,No
+1936-37,1/1/1937,Toledo,41,33,Regular Season,No
+1936-37,1/5/1937,Butler,36,27,Regular Season,No
+1936-37,1/9/1937,Purdue,26,37,Regular Season,Yes
+1936-37,1/11/1937,Northwestern,34,31,Regular Season,Yes
+1936-37,1/16/1937,Wisconsin,41,31,Regular Season,Yes
+1936-37,1/18/1937,Chicago,35,29,Regular Season,Yes
+1936-37,1/23/1937,Ohio State,32,37,Regular Season,Yes
+1936-37,1/25/1937,Chicago,32,19,Regular Season,Yes
+1936-37,2/13/1937,Michigan State,38,31,Regular Season,No
+1936-37,2/15/1937,Indiana,55,31,Regular Season,Yes
+1936-37,2/20/1937,Northwestern,34,32,Regular Season,Yes
+1936-37,2/22/1937,Purdue,31,16,Regular Season,Yes
+1936-37,2/27/1937,Ohio State,38,24,Regular Season,Yes
+1936-37,3/1/1937,Indiana,27,31,Regular Season,Yes
+1936-37,3/6/1937,Wisconsin,41,27,Regular Season,Yes
+1937-38,12/11/1937,Michigan State,43,40,Regular Season,No
+1937-38,12/16/1937,Akron,32,27,Regular Season,No
+1937-38,12/17/1937,Maryland,43,26,Regular Season,No
+1937-38,12/20/1937,Dartmouth,42,17,Regular Season,No
+1937-38,12/21/1937,Rochester,50,29,Regular Season,No
+1937-38,1/1/1938,Toledo,50,38,Regular Season,No
+1937-38,1/3/1938,Butler,35,38,Regular Season,No
+1937-38,1/8/1938,Illinois,45,37,Regular Season,Yes
+1937-38,1/10/1938,Ohio State,38,28,Regular Season,Yes
+1937-38,1/15/1938,Minnesota,31,16,Regular Season,Yes
+1937-38,1/17/1938,Wisconsin,30,39,Regular Season,Yes
+1937-38,1/22/1938,Northwestern,29,30,Regular Season,Yes
+1937-38,1/24/1938,Ohio State,29,26,Regular Season,Yes
+1937-38,2/12/1938,Michigan State,35,41,Regular Season,No
+1937-38,2/14/1938,Iowa,30,38,Regular Season,Yes
+1937-38,2/19/1938,Minnesota,26,29,Regular Season,Yes
+1937-38,2/21/1938,Wisconsin,58,29,Regular Season,Yes
+1937-38,2/26/1938,Iowa,25,37,Regular Season,Yes
+1937-38,2/28/1938,Illinois,32,36,Regular Season,Yes
+1937-38,3/7/1938,Northwestern,30,22,Regular Season,Yes
+1938-39,12/10/1938,Michigan State,41,34,Regular Season,No
+1938-39,12/15/1938,Notre Dame,40,38,Regular Season,No
+1938-39,12/17/1938,Rochester,47,45,Regular Season,No
+1938-39,12/19/1938,Syracuse,39,37,Regular Season,No
+1938-39,12/22/1938,Cornell,42,27,Regular Season,No
+1938-39,12/30/1938,Butler,40,31,Regular Season,No
+1938-39,1/2/1939,Toledo,36,44,Regular Season,No
+1938-39,1/7/1939,Illinois,20,30,Regular Season,Yes
+1938-39,1/9/1939,Northwestern,37,28,Regular Season,Yes
+1938-39,1/14/1939,Minnesota,21,34,Regular Season,Yes
+1938-39,1/16/1939,Wisconsin,39,41,Regular Season,Yes
+1938-39,1/21/1939,Iowa,47,32,Regular Season,Yes
+1938-39,1/23/1939,Ohio State,31,45,Regular Season,Yes
+1938-39,2/11/1939,Michigan State,30,25,Regular Season,No
+1938-39,2/13/1939,Illinois,28,35,Regular Season,Yes
+1938-39,2/18/1939,Chicago,29,34,Regular Season,Yes
+1938-39,2/25/1939,Purdue,28,29,Regular Season,Yes
+1938-39,2/27/1939,Ohio State,28,42,Regular Season,Yes
+1938-39,3/4/1939,Indiana,53,45,Regular Season,Yes
+1938-39,3/6/1939,Northwestern,32,26,Regular Season,Yes
+1939-40,12/9/1939,Michigan State,33,27,Regular Season,No
+1939-40,12/16/1939,Notre Dame,41,39,Regular Season,No
+1939-40,12/18/1939,Connecticut,62,45,Regular Season,No
+1939-40,12/21/1939,Tulane,63,22,Regular Season,No
+1939-40,12/22/1939,Rochester,23,31,Regular Season,No
+1939-40,12/30/1939,Cornell,29,25,Regular Season,No
+1939-40,1/1/1940,Pittsburgh,44,35,Regular Season,No
+1939-40,1/6/1940,Ohio State,40,35,Regular Season,Yes
+1939-40,1/8/1940,Wisconsin,44,39,Regular Season,Yes
+1939-40,1/13/1940,Iowa,47,38,Regular Season,Yes
+1939-40,1/15/1940,Illinois,43,48,Regular Season,Yes
+1939-40,1/20/1940,Michigan State,32,27,Regular Season,No
+1939-40,2/10/1940,Northwestern,34,47,Regular Season,Yes
+1939-40,2/12/1940,Indiana,30,57,Regular Season,Yes
+1939-40,2/17/1940,Chicago,29,18,Regular Season,Yes
+1939-40,2/19/1940,Purdue,17,25,Regular Season,Yes
+1939-40,2/24/1940,Illinois,28,51,Regular Season,Yes
+1939-40,2/26/1940,Northwestern,39,34,Regular Season,Yes
+1939-40,3/2/1940,Ohio State,32,51,Regular Season,Yes
+1939-40,3/4/1940,Minnesota,43,32,Regular Season,Yes
+1940-41,12/7/1940,Michigan State,42,14,Regular Season,No
+1940-41,12/14/1940,Michigan Normal,36,16,Regular Season,No
+1940-41,12/19/1940,Notre Dame,27,37,Regular Season,No
+1940-41,12/21/1940,Butler,32,25,Regular Season,No
+1940-41,12/28/1940,Pittsburgh,46,40,Regular Season,No
+1940-41,12/30/1940,Princeton,29,30,Regular Season,No
+1940-41,1/6/1941,Ohio State,39,49,Regular Season,Yes
+1940-41,1/11/1941,Purdue,40,41,Regular Season,Yes
+1940-41,1/13/1941,Illinois,41,47,Regular Season,Yes
+1940-41,1/18/1941,Wisconsin,30,40,Regular Season,Yes
+1940-41,1/20/1941,Minnesota,41,24,Regular Season,Yes
+1940-41,1/25/1941,Northwestern,34,45,Regular Season,Yes
+1940-41,1/27/1941,Indiana,37,41,Regular Season,Yes
+1940-41,2/12/1941,Michigan State,32,35,Regular Season,No
+1940-41,2/15/1941,Iowa,40,29,Regular Season,Yes
+1940-41,2/17/1941,Chicago,42,29,Regular Season,Yes
+1940-41,2/22/1941,Illinois,47,31,Regular Season,Yes
+1940-41,2/24/1941,Northwestern,45,39,Regular Season,Yes
+1940-41,3/1/1941,Ohio State,37,45,Regular Season,Yes
+1941-42,12/13/1941,Michigan State,37,20,Regular Season,No
+1941-42,12/19/1941,Notre Dame,40,46,Regular Season,No
+1941-42,12/29/1941,Butler,37,45,Regular Season,No
+1941-42,12/31/1941,Marquette,42,49,Regular Season,No
+1941-42,1/3/1942,Iowa,34,40,Regular Season,Yes
+1941-42,1/5/1942,Purdue,18,36,Regular Season,Yes
+1941-42,1/10/1942,Illinois,40,44,Regular Season,Yes
+1941-42,1/12/1942,Northwestern,34,32,Regular Season,Yes
+1941-42,1/17/1942,Minnesota,32,44,Regular Season,Yes
+1941-42,1/19/1942,Wisconsin,36,58,Regular Season,Yes
+1941-42,1/24/1942,Ohio State,53,39,Regular Season,Yes
+1941-42,1/26/1942,Indiana,36,64,Regular Season,Yes
+1941-42,1/31/1942,Minnesota,34,32,Regular Season,Yes
+1941-42,2/11/1942,Michigan State,34,57,Regular Season,No
+1941-42,2/14/1942,Illinois,29,52,Regular Season,Yes
+1941-42,2/16/1942,Indiana,42,47,Regular Season,Yes
+1941-42,2/21/1942,Iowa,38,59,Regular Season,Yes
+1941-42,2/23/1942,Chicago,61,37,Regular Season,Yes
+1941-42,2/28/1942,Chicago,49,36,Regular Season,Yes
+1941-42,3/2/1942,Purdue,41,52,Regular Season,Yes
+1942-43,12/7/1942,Michigan State,36,31,Regular Season,No
+1942-43,12/12/1942,Marquette,42,32,Regular Season,No
+1942-43,12/17/1942,Selfridge Field,36,35,Regular Season,No
+1942-43,12/30/1942,Selfridge Field,56,33,Regular Season,No
+1942-43,1/4/1943,Michigan State,29,26,Regular Season,No
+1942-43,1/9/1943,Illinois,34,47,Regular Season,Yes
+1942-43,1/11/1943,Northwestern,32,49,Regular Season,Yes
+1942-43,1/16/1943,Wisconsin,38,34,Regular Season,Yes
+1942-43,1/18/1943,Wisconsin,34,55,Regular Season,Yes
+1942-43,1/21/1943,Romulus Air Base,51,21,Regular Season,No
+1942-43,2/6/1943,Indiana,24,32,Regular Season,Yes
+1942-43,2/8/1943,Indiana,33,48,Regular Season,Yes
+1942-43,2/15/1943,Purdue,27,33,Regular Season,Yes
+1942-43,2/16/1943,Purdue,37,34,Regular Season,Yes
+1942-43,2/20/1943,Ohio State,44,46,Regular Season,Yes
+1942-43,2/22/1943,Ohio State,38,53,Regular Season,Yes
+1942-43,2/27/1943,Chicago,67,33,Regular Season,Yes
+1942-43,3/1/1943,Northwestern,53,41,Regular Season,Yes
+1943-44,12/4/1943,Central Michigan,51,28,Regular Season,No
+1943-44,12/6/1943,Romulus Air Base,42,30,Regular Season,No
+1943-44,12/11/1943,Fort Custer,46,44,Regular Season,No
+1943-44,12/18/1943,Western Michigan,38,48,Regular Season,No
+1943-44,1/1/1944,Western Michigan,50,57,Regular Season,No
+1943-44,1/7/1944,Northwestern,47,57,Regular Season,Yes
+1943-44,1/8/1944,Illinois,52,45,Regular Season,Yes
+1943-44,1/14/1944,Wisconsin,41,50,Regular Season,Yes
+1943-44,1/15/1944,Wisconsin,31,42,Regular Season,Yes
+1943-44,1/18/1944,Fort Custer,32,35,Regular Season,No
+1943-44,1/21/1944,Purdue,44,46,Regular Season,Yes
+1943-44,1/22/1944,Purdue,35,51,Regular Season,Yes
+1943-44,1/28/1944,Ohio State,49,53,Regular Season,Yes
+1943-44,1/29/1944,Ohio State,39,52,Regular Season,Yes
+1943-44,2/4/1944,Indiana,65,49,Regular Season,Yes
+1943-44,2/5/1944,Indiana,46,44,Regular Season,Yes
+1943-44,2/12/1944,Chicago,74,41,Regular Season,Yes
+1943-44,2/19/1944,Northwestern,50,45,Regular Season,Yes
+1944-45,11/24/1944,Romulus Air Base,52,27,Regular Season,No
+1944-45,11/25/1944,Central Michigan,39,27,Regular Season,No
+1944-45,12/2/1944,Western Michigan,46,34,Regular Season,No
+1944-45,12/5/1944,Romulus Air Base,35,32,Regular Season,No
+1944-45,12/10/1944,Kellogg Farm Army Base,50,17,Regular Season,No
+1944-45,12/17/1944,Western Michigan,50,35,Regular Season,No
+1944-45,12/22/1944,Wyoming,38,33,Regular Season,No
+1944-45,12/30/1944,Ohio State,41,44,Regular Season,Yes
+1944-45,1/5/1945,Indiana,54,53,Regular Season,Yes
+1944-45,1/6/1945,Illinois,43,38,Regular Season,Yes
+1944-45,1/13/1945,Illinois,37,55,Regular Season,Yes
+1944-45,1/19/1945,Iowa,27,29,Regular Season,Yes
+1944-45,1/21/1945,Ohio State,47,61,Regular Season,Yes
+1944-45,1/27/1945,Indiana,47,43,Regular Season,Yes
+1944-45,2/2/1945,Wisconsin,50,39,Regular Season,Yes
+1944-45,2/3/1945,Iowa,37,50,Regular Season,Yes
+1944-45,2/9/1945,Northwestern,34,49,Regular Season,Yes
+1944-45,2/10/1945,Wisconsin,44,55,Regular Season,Yes
+1944-45,2/16/1945,Northwestern,46,45,Regular Season,Yes
+1945-46,11/16/1945,Central Michigan,68,45,Regular Season,No
+1945-46,12/1/1945,Michigan State,47,39,Regular Season,No
+1945-46,12/8/1945,Western Michigan,69,49,Regular Season,No
+1945-46,12/15/1945,Great Lakes,58,45,Regular Season,No
+1945-46,12/17/1945,Utah,48,32,Regular Season,No
+1945-46,12/22/1945,Indiana,58,67,Regular Season,Yes
+1945-46,12/29/1945,Ohio State,40,57,Regular Season,Yes
+1945-46,1/5/1946,Illinois,49,48,Regular Season,Yes
+1945-46,1/7/1946,Michigan State,36,48,Regular Season,No
+1945-46,1/11/1946,Chicago,81,23,Regular Season,Yes
+1945-46,1/12/1946,Northwestern,41,60,Regular Season,Yes
+1945-46,1/19/1946,Northwestern,56,37,Regular Season,Yes
+1945-46,1/21/1946,Indiana,43,46,Regular Season,Yes
+1945-46,1/26/1946,Ohio State,62,46,Regular Season,Yes
+1945-46,2/2/1946,Wisconsin,57,58,Regular Season,Yes
+1945-46,2/9/1946,Illinois,44,49,Regular Season,Yes
+1945-46,2/11/1946,Wisconsin,66,56,Regular Season,Yes
+1945-46,2/15/1946,Chicago,64,37,Regular Season,Yes
+1945-46,2/16/1946,Great Lakes,56,50,Regular Season,No
+1946-47,12/7/1946,Michigan State,51,29,Regular Season,No
+1946-47,12/14/1946,Western Michigan,61,65,Regular Season,No
+1946-47,12/19/1946,Stanford,45,37,Regular Season,No
+1946-47,12/27/1946,Iowa State,58,37,Regular Season,No
+1946-47,12/28/1946,Iowa State,38,27,Regular Season,No
+1946-47,12/31/1946,Marquette,70,64,Regular Season,No
+1946-47,1/4/1947,Northwestern,39,31,Regular Season,Yes
+1946-47,1/11/1947,Minnesota,37,48,Regular Season,Yes
+1946-47,1/13/1947,Northwestern,49,41,Regular Season,Yes
+1946-47,1/18/1947,Purdue,66,43,Regular Season,Yes
+1946-47,1/20/1947,Toledo,52,59,Regular Season,No
+1946-47,1/25/1947,Indiana,42,55,Regular Season,Yes
+1946-47,2/8/1947,Ohio State,56,53,Regular Season,Yes
+1946-47,2/10/1947,Wisconsin,51,52,Regular Season,Yes
+1946-47,2/15/1947,Iowa,46,55,Regular Season,Yes
+1946-47,2/17/1947,Purdue,45,56,Regular Season,Yes
+1946-47,2/22/1947,Minnesota,44,25,Regular Season,Yes
+1946-47,2/24/1947,Illinois,36,45,Regular Season,Yes
+1946-47,3/1/1947,Michigan State,59,47,Regular Season,No
+1946-47,3/3/1947,Ohio State,66,62,Regular Season,Yes
+1947-48,12/13/1947,Western Michigan,63,50,Regular Season,No
+1947-48,12/18/1947,Michigan State,38,43,Regular Season,No
+1947-48,12/20/1947,Marquette,78,70,Regular Season,No
+1947-48,12/22/1947,USC,51,38,Regular Season,No
+1947-48,12/29/1947,Iowa State,51,53,Regular Season,No
+1947-48,12/30/1947,Iowa State,41,47,Regular Season,No
+1947-48,1/3/1948,Toledo,58,52,Regular Season,No
+1947-48,1/10/1948,Minnesota,43,41,Regular Season,Yes
+1947-48,1/12/1948,Northwestern,48,51,Regular Season,Yes
+1947-48,1/17/1948,Wisconsin,43,38,Regular Season,Yes
+1947-48,1/31/1948,Northwestern,53,37,Regular Season,Yes
+1947-48,2/2/1948,Ohio State,66,70,Regular Season,Yes
+1947-48,2/7/1948,Illinois,66,57,Regular Season,Yes
+1947-48,2/14/1948,Purdue,69,56,Regular Season,Yes
+1947-48,2/16/1948,Indiana,66,54,Regular Season,Yes
+1947-48,2/21/1948,Minnesota,56,45,Regular Season,Yes
+1947-48,2/23/1948,Purdue,46,35,Regular Season,Yes
+1947-48,2/28/1948,Ohio State,40,36,Regular Season,Yes
+1947-48,3/1/1948,Iowa,51,35,Regular Season,Yes
+1947-48,3/6/1948,Michigan State,69,28,Regular Season,No
+1947-48,3/18/1948,Holy Cross,45,63,NCAA Tournament,No
+1947-48,3/20/1948,Columbia,66,49,NCAA Tournament,No
+1948-49,12/4/1948,Michigan State,66,33,Regular Season,No
+1948-49,12/11/1948,Toledo,51,40,Regular Season,No
+1948-49,12/13/1948,Pittsburgh,62,44,Regular Season,No
+1948-49,12/17/1948,Colorado,47,38,Regular Season,No
+1948-49,12/18/1948,Colorado A&M,56,37,Regular Season,No
+1948-49,12/20/1948,Stanford,51,53,Regular Season,No
+1948-49,12/21/1948,Santa Clara,53,37,Regular Season,No
+1948-49,1/1/1949,Toledo,46,45,Regular Season,No
+1948-49,1/8/1949,Minnesota,31,45,Regular Season,Yes
+1948-49,1/10/1949,Purdue,36,45,Regular Season,Yes
+1948-49,1/15/1949,Northwestern,53,40,Regular Season,Yes
+1948-49,1/29/1949,Ohio State,54,48,Regular Season,Yes
+1948-49,1/31/1949,Michigan State,49,38,Regular Season,No
+1948-49,2/5/1949,Northwestern,54,46,Regular Season,Yes
+1948-49,2/7/1949,Wisconsin,40,38,Regular Season,Yes
+1948-49,2/12/1949,Indiana,54,47,Regular Season,Yes
+1948-49,2/19/1949,Minnesota,47,54,Regular Season,Yes
+1948-49,2/21/1949,Purdue,64,53,Regular Season,Yes
+1948-49,2/26/1949,Ohio State,44,69,Regular Season,Yes
+1948-49,3/5/1949,Iowa,62,63,Regular Season,Yes
+1948-49,3/7/1949,Illinois,70,53,Regular Season,Yes
+1949-50,12/3/1949,Michigan State,52,49,Regular Season,No
+1949-50,12/6/1949,Miami (Ohio),79,48,Regular Season,No
+1949-50,12/10/1949,Toledo,36,57,Regular Season,No
+1949-50,12/14/1949,Butler,73,48,Regular Season,No
+1949-50,12/19/1949,North Carolina State,54,46,Regular Season,No
+1949-50,12/20/1949,North Carolina State,52,63,Regular Season,No
+1949-50,12/27/1949,Missouri,46,47,Regular Season,No
+1949-50,12/28/1949,Nebraska,67,65,Regular Season,No
+1949-50,12/29/1949,Kansas,49,47,Regular Season,No
+1949-50,1/7/1950,Iowa,66,46,Regular Season,Yes
+1949-50,1/9/1950,Indiana,69,67,Regular Season,Yes
+1949-50,1/14/1950,Wisconsin,41,53,Regular Season,Yes
+1949-50,1/16/1950,Ohio State,58,74,Regular Season,Yes
+1949-50,1/21/1950,Minnesota,52,60,Regular Season,Yes
+1949-50,2/6/1950,Northwestern,59,44,Regular Season,Yes
+1949-50,2/11/1950,Purdue,53,61,Regular Season,Yes
+1949-50,2/13/1950,Minnesota,48,53,Regular Season,Yes
+1949-50,2/18/1950,Illinois,60,70,Regular Season,Yes
+1949-50,2/20/1950,Michigan State,70,53,Regular Season,No
+1949-50,2/25/1950,Northwestern,53,76,Regular Season,Yes
+1949-50,2/27/1950,Ohio State,58,69,Regular Season,Yes
+1949-50,3/4/1950,Purdue,70,60,Regular Season,Yes

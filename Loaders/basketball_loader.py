@@ -5,11 +5,33 @@ import re
 from datetime import datetime
 import time
 from random import randint
+import csv
 
-def scrape_historical():
+def csv_data():
+    year_data = {}
+    csv_file = 'Loaders/michigan_games.csv'
+    with open(csv_file, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            season = row['Season']
+            game_data = {
+                'date': row['Date'],
+                'event_type': row['Event Type'],
+                'opponent_name': row['Opponent Name'],
+                'conference': row['Conference Game'].strip().lower() == 'yes',
+                'michigan_score': int(row['Michigan Score']),
+                'opponent_score': int(row['Opponent Score'])
+            }
+            if season not in year_data:
+                year_data[season] = {}
+            
+            year_data[season][game_data["date"]] = game_data
+    return year_data
+
+def scrape_historical(old_data):
     """ Scrapes all historical basketball data """
 
-    year_data = {}
+    year_data = old_data.copy()
     event_types = {}
     event_types["REG"] = "Regular Season"
     event_types["CTOURN"] = "Big Ten Tourney"
@@ -92,11 +114,12 @@ def main():
 
     db_file = "michigami.db"
     print("Scraping Michigan basketball data...")
-    year_data = scrape_historical()
-    #load_db(db_file, year_data)
+    old_data = csv_data()
+    year_data = scrape_historical(old_data)
+    load_db(db_file, year_data)
     print("All data loaded successfully.")
     
-    #print(year_data['2024'])
+    print(old_data)
 
 if __name__ == "__main__":
     main()
