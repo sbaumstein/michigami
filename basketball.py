@@ -31,22 +31,40 @@ def scrape_scores(date, link):
 
     date = date
     url = link
+    url = "https://www.espn.com/mens-college-basketball/game/_/gameId/401708403"
 
-    url = "https://www.espn.com/mens-college-basketball/game/_/gameId/401719348/cal-poly-california"
-    res = requests.get(url, headers=headers)
 
-    if res.status_code != 200:
-        print(f"Request failed with status code: {res.status_code}")
-    else:
-        try:
-            soup = BeautifulSoup(res.content, "html.parser")
-            scores = soup.find_all("div", class_=lambda x: x and "Gamestrip__Score" in x)
-            score_values = [re.search(r'\d+', score.get_text(strip=True)).group() for score in scores]
-            away_score = score_values[0]
-            home_score = score_values[-1]
-            print(away_score, home_score)
-        except Exception as e:
-            print("No Score Yet!", e)
+    final = False
+    while not final:
+        res = requests.get(url, headers=headers)
+        if res.status_code != 200:
+            print(f"Request failed with status code: {res.status_code}")
+            final = True
+        else:
+            try:
+                soup = BeautifulSoup(res.content, "html.parser")
+                scores = soup.find_all("div", class_=lambda x: x and "Gamestrip__Score" in x)
+                score_values = [re.search(r'\d+', score.get_text(strip=True)).group() for score in scores]
+                gamestrip = soup.find("svg", class_=lambda x: x and "Gamestrip__WinnerIcon" in x)
+                if gamestrip:
+                    final = True
+                away_score = score_values[0]
+                home_score = score_values[-1]
+                # TODO: add logic for figuring out if Michigan is home or away
+                mich_score = home_score
+                opp_score = away_score
+                michigami = unique_ball[(unique_ball['MichiganScore'] == mich_score) & (unique_ball['OpponentScore'] == opp_score)]
+                with open("output.txt", "a") as file:
+                    file.write(f"{away_score}, {home_score}")
+                    if not michigami.empty:
+                        file.write(" Currently Michigami")
+                    else:
+                        file.write(" Not Michigami")
+                    file.write("\n")
+            except Exception as e:
+                print("No Score Yet! ", e)
+        
+        time.sleep(300)
 
     connection.close()
 
@@ -61,4 +79,4 @@ if __name__ == "__main__":
     date_arg = sys.argv[1]
     link_arg = sys.argv[2]
     main(date_arg, link_arg)
-
+    

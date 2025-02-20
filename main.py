@@ -13,10 +13,13 @@ import subprocess
 def get_api_data():
 
     scheduler = BlockingScheduler()
-    #scheduler.remove_all_jobs()
+    scheduler.remove_all_jobs()
     current_year = datetime.now().year
     today_date = datetime.now()
-    test_date = today_date.replace(minute=37, second=0)
+    test_date = today_date.replace(minute=45, second=0)
+    scheduler.add_job(run_basketball, 'date', run_date=test_date, args=[test_date, " "])
+    for job in scheduler.get_jobs():
+        print(job)
 
     michigan_football_api = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/teams/130"
     football_response = requests.get(michigan_football_api)
