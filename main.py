@@ -6,20 +6,15 @@ from bs4 import BeautifulSoup
 import re
 from datetime import datetime
 import json
-from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 import subprocess
 
 
 def get_api_data():
 
-    scheduler = BlockingScheduler()
+    scheduler = BackgroundScheduler()
     scheduler.remove_all_jobs()
     current_year = datetime.now().year
-    today_date = datetime.now()
-    test_date = today_date.replace(minute=45, second=0)
-    scheduler.add_job(run_basketball, 'date', run_date=test_date, args=[test_date, " "])
-    for job in scheduler.get_jobs():
-        print(job)
 
     michigan_football_api = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/teams/130"
     football_response = requests.get(michigan_football_api)
@@ -34,10 +29,9 @@ def get_api_data():
             format_str = "%Y %m/%d - %I:%M %p %Z"
             dt = datetime.strptime(date_str_with_year, format_str)
             game_today = dt.date() == datetime.now().date()
-            #game_today = True
 
-            if(game_today):
-                scheduler.add_job(run_foolball, 'date', run_date=test_date, args=[dt, next_football_link])
+            #if(game_today):
+               #scheduler.add_job(run_foolball, 'date', run_date=test_date, args=[dt, next_football_link])
         except:
             print("No Football Game Coming Up")
     else:
@@ -55,18 +49,30 @@ def get_api_data():
             date_str_with_year = f"{current_year} {next_basketall_date}"
             format_str = "%Y %m/%d - %I:%M %p %Z"
             dt = datetime.strptime(date_str_with_year, format_str)
+            #today_date = datetime.now()
+            #test_date = today_date.replace(minute=51, second=0)
             game_today = dt.date() == datetime.now().date()
-            #game_today = True
+            game_today = True
 
             if(game_today):
-                scheduler.add_job(run_basketball, 'date', run_date=test_date, args=[dt, next_basketball_link])
+                scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link])
+                for job in scheduler.get_jobs():
+                    print(job)
         except Exception as e:
             print("No Basketball Game Coming Up", e)
     else:
         print("Error:", basketball_response.status_code)
     
+    print("Scheduler started")
     scheduler.start()
+
+    while scheduler.get_jobs():
+        time.sleep(5)
+
+    print("All jobs completed. Shutting down scheduler.")
     scheduler.shutdown()
+    print("Scheduler ended")
+    return
 
 
 def run_basketball(dt, link):

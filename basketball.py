@@ -7,6 +7,7 @@ import re
 from datetime import datetime
 import json
 import sys
+from urllib.parse import urlparse
 
 
 def scrape_scores(date, link):
@@ -19,9 +20,6 @@ def scrape_scores(date, link):
     basketball = pd.read_sql_query("SELECT * FROM basketball", connection)
     reverse_ball = basketball.iloc[::-1].reset_index(drop=True)
     unique_ball = reverse_ball.drop_duplicates(subset=["MichiganScore", "OpponentScore"]).reset_index(drop=True)
-    #print(unique_ball.size)
-    #print(unique_ball.head(20))
-
 
     # need this so that ESPN doesn't block the scraping
     headers = {
@@ -31,10 +29,22 @@ def scrape_scores(date, link):
 
     date = date
     url = link
-    url = "https://www.espn.com/mens-college-basketball/game/_/gameId/401708403"
-
+    michigan_home = True
+    path_segments = urlparse(url).path.strip("/").split("/")[-1].split("-")
+    if "michigan" in path_segments[0]:
+        michigan_home = False
+        with open("output.txt", "a") as file:
+            file.write(f"Michigan Away")
+            file.write("\n")
+    elif "michigan" in path_segments[1]:
+        michigan_home = True
+        with open("output.txt", "a") as file:
+            file.write(f"Michigan Home")
+            file.write("\n")
+    
 
     final = False
+    michigami = False
     while not final:
         res = requests.get(url, headers=headers)
         if res.status_code != 200:
@@ -48,25 +58,32 @@ def scrape_scores(date, link):
                 gamestrip = soup.find("svg", class_=lambda x: x and "Gamestrip__WinnerIcon" in x)
                 if gamestrip:
                     final = True
-                away_score = score_values[0]
-                home_score = score_values[-1]
-                # TODO: add logic for figuring out if Michigan is home or away
-                mich_score = home_score
-                opp_score = away_score
-                michigami = unique_ball[(unique_ball['MichiganScore'] == mich_score) & (unique_ball['OpponentScore'] == opp_score)]
+                away_score = int(score_values[0])
+                home_score = int(score_values[-1])
+                if michigan_home:
+                    mich_score = home_score
+                    opp_score = away_score
+                else:
+                    mich_score = away_score
+                    opp_score = home_score
+                michigami =  not ((unique_ball["MichiganScore"] == mich_score) & (unique_ball["OpponentScore"] == opp_score)).any()
                 with open("output.txt", "a") as file:
-                    file.write(f"{away_score}, {home_score}")
-                    if not michigami.empty:
-                        file.write(" Currently Michigami")
-                    else:
-                        file.write(" Not Michigami")
+                    file.write(f"Michigan: {mich_score}, Opponent: {opp_score}, Michigami = {michigami}, Final = {final}")
                     file.write("\n")
             except Exception as e:
-                print("No Score Yet! ", e)
+                with open("output.txt", "a") as file:
+                    file.write(f"No Score yet!")
         
+        if final:
+            break
         time.sleep(300)
 
     connection.close()
+    return
+
+def write_to_sql(mich_score, opp_score):
+    #TO-DO: implement function that writes every score to the DB with all of the scores
+    return
 
 def main(date, link):
     scrape_scores(date, link)

@@ -8,13 +8,17 @@ from datetime import datetime
 import json
 
 
-def scrape_scores(date, link):
+def scrape_scores():
     
     # Example: Reading from SQLite to Pandas
     connection = sqlite3.connect("michigami.db")
     football = pd.read_sql_query("SELECT * FROM football", connection)
     reverse_foot = football.iloc[::-1].reset_index(drop=True)
     unique_foot = reverse_foot.drop_duplicates(subset=["MichiganScore", "OpponentScore"]).reset_index(drop=True)
+    mich_score = 700
+    opp_score = 15
+    michigami =  not ((unique_foot["MichiganScore"] == mich_score) & (unique_foot["OpponentScore"] == opp_score)).any()
+    print(mich_score, opp_score, michigami)
     #print(unique_foot.size)
     #print(unique_foot.head(20))
 
@@ -24,9 +28,6 @@ def scrape_scores(date, link):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer": "https://www.espn.com/",
     }
-
-    date = date
-    url = link
     # figure out to scrape football scores
 
     connection.close()
