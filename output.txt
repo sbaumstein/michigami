@@ -1,2 +1,33 @@
 Working
-Michigan: 65, Opponent: 71, Michigami = False, Final = True
+Michigan Away
+No Score yet!
+Michigan: 0, Opponent: 0, Michigami = True, Final = False
+Michigan: 3, Opponent: 8, Michigami = True, Final = False
+Michigan: 5, Opponent: 8, Michigami = True, Final = False
+Michigan: 6, Opponent: 15, Michigami = True, Final = False
+Michigan: 6, Opponent: 20, Michigami = True, Final = False
+Michigan: 13, Opponent: 23, Michigami = False, Final = False
+Michigan: 13, Opponent: 25, Michigami = True, Final = False
+Michigan: 17, Opponent: 33, Michigami = True, Final = False
+Michigan: 24, Opponent: 39, Michigami = True, Final = False
+Michigan: 26, Opponent: 47, Michigami = True, Final = False
+Michigan: 28, Opponent: 50, Michigami = True, Final = False
+Michigan: 28, Opponent: 50, Michigami = True, Final = False
+Michigan: 28, Opponent: 50, Michigami = True, Final = False
+Michigan: 28, Opponent: 50, Michigami = True, Final = False
+Michigan: 31, Opponent: 52, Michigami = True, Final = False
+Michigan: 33, Opponent: 55, Michigami = False, Final = False
+Michigan: 40, Opponent: 61, Michigami = True, Final = False
+Michigan: 43, Opponent: 61, Michigami = True, Final = False
+Michigan: 47, Opponent: 61, Michigami = False, Final = False
+Michigan: 50, Opponent: 64, Michigami = True, Final = False
+Michigan: 52, Opponent: 64, Michigami = False, Final = False
+Michigan: 56, Opponent: 69, Michigami = True, Final = False
+Michigan: 56, Opponent: 71, Michigami = False, Final = False
+Michigan: 60, Opponent: 75, Michigami = True, Final = False
+Michigan: 60, Opponent: 79, Michigami = True, Final = False
+Michigan: 62, Opponent: 79, Michigami = False, Final = False
+Michigan: 62, Opponent: 79, Michigami = False, Final = True
+Working
+No Score yet!Working
+No Score yet!

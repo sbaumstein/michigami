@@ -8,6 +8,7 @@ from datetime import datetime
 import json
 import sys
 from urllib.parse import urlparse
+from twitter import michigami_tweet, not_michigami_tweet
 
 
 def scrape_scores(date, link):
@@ -31,18 +32,20 @@ def scrape_scores(date, link):
     url = link
     michigan_home = True
     path_segments = urlparse(url).path.strip("/").split("/")[-1].split("-")
+    opp_name = ""
     if "michigan" in path_segments[0]:
         michigan_home = False
+        opp_name = path_segments[1]
         with open("output.txt", "a") as file:
             file.write(f"Michigan Away")
             file.write("\n")
     elif "michigan" in path_segments[1]:
         michigan_home = True
+        opp_name = path_segments[0]
         with open("output.txt", "a") as file:
             file.write(f"Michigan Home")
             file.write("\n")
     
-
     final = False
     michigami = False
     while not final:
@@ -77,12 +80,36 @@ def scrape_scores(date, link):
         if final:
             break
         time.sleep(300)
+    #twweeting logic
+    if michigami:
+        num_michigami = unique_ball.size
+        michigami_tweet(mich_score, opp_score, opp_name, num_michigami, "basketball")
 
+    else:
+        num_times = ((basketball["MichiganScore"] == mich_score) & (basketball["OpponentScore"] == opp_score)).sum()
+        filtered_df = basketball[(basketball["MichiganScore"] == mich_score) & (basketball["OpponentScore"] == opp_score)]
+        most_recent = filtered_df["GameDate"].max()
+        earliest = filtered_df["GameDate"].min()
+        not_michigami_tweet(mich_score, opp_score, opp_name, num_times, most_recent, earliest, "basketball")
+
+    #adds to SQL
+    cursor = connection.cursor()
+    try:
+        cursor.execute("""
+            INSERT INTO basketball (MichiganScore, OpponentScore, OpponentName, EventType, ConferenceGame, GameDate)
+            VALUES (?, ?, ?, ?, ?, ?)
+            """, (
+                int(mich_score),
+                int(opp_score),
+                opp_name,
+                "Fade",
+                "No",
+                date
+            ))
+    except sqlite3.IntegrityError as e:
+        print(f"{e}")
+    connection.commit()
     connection.close()
-    return
-
-def write_to_sql(mich_score, opp_score):
-    #TO-DO: implement function that writes every score to the DB with all of the scores
     return
 
 def main(date, link):

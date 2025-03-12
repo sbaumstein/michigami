@@ -12,8 +12,14 @@ def scrape_scores():
     opp_score = 71
     michigami =  not ((unique_ball["MichiganScore"] == mich_score) & (unique_ball["OpponentScore"] == opp_score)).any()
     print(mich_score, opp_score, michigami)
-    #print(unique_foot.size)
-    #print(unique_foot.head(20))
+    print(((basketball["MichiganScore"] == mich_score) & (basketball["OpponentScore"] == opp_score)).sum())
+
+    filtered_df = basketball[(basketball["MichiganScore"] == mich_score) & 
+                         (basketball["OpponentScore"] == opp_score)]
+
+    most_recent_date = filtered_df["GameDate"].min()
+
+    print(most_recent_date)
 
     connection.close()
 

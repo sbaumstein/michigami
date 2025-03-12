@@ -55,7 +55,7 @@ def get_api_data():
             game_today = True
 
             if(game_today):
-                scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link])
+                scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link], misfire_grace_time=300)
                 for job in scheduler.get_jobs():
                     print(job)
         except Exception as e:
