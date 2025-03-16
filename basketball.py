@@ -19,8 +19,7 @@ def scrape_scores(date, link):
     # Example: Reading from SQLite to Pandas
     connection = sqlite3.connect("michigami.db")
     basketball = pd.read_sql_query("SELECT * FROM basketball", connection)
-    reverse_ball = basketball.iloc[::-1].reset_index(drop=True)
-    unique_ball = reverse_ball.drop_duplicates(subset=["MichiganScore", "OpponentScore"]).reset_index(drop=True)
+    unique_ball = basketball.drop_duplicates(subset=["MichiganScore", "OpponentScore"]).reset_index(drop=True)
 
     # need this so that ESPN doesn't block the scraping
     headers = {
@@ -80,10 +79,12 @@ def scrape_scores(date, link):
         if final:
             break
         time.sleep(300)
+
     #twweeting logic
     if michigami:
-        num_michigami = unique_ball.size
+        num_michigami = unique_ball.shape[0]
         michigami_tweet(mich_score, opp_score, opp_name, num_michigami, "basketball")
+    
 
     else:
         num_times = ((basketball["MichiganScore"] == mich_score) & (basketball["OpponentScore"] == opp_score)).sum()
@@ -91,7 +92,7 @@ def scrape_scores(date, link):
         most_recent = filtered_df["GameDate"].max()
         earliest = filtered_df["GameDate"].min()
         not_michigami_tweet(mich_score, opp_score, opp_name, num_times, most_recent, earliest, "basketball")
-
+    
     #adds to SQL
     cursor = connection.cursor()
     try:
