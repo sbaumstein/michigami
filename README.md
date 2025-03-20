@@ -4,3 +4,6 @@ Set Up:
 - Drop Tables: .read SQL/drop_tables.sql
 - call loaders: python3 Loaders/filename.py
 Run files out Michigami directory
+
+Hiw ti make it run automatically:
+./install_cron.sh

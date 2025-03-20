@@ -7,8 +7,8 @@ def play_around():
     connection = sqlite3.connect("michigami.db")
     basketball = pd.read_sql_query("SELECT * FROM basketball", connection)
     unique_ball = basketball.drop_duplicates(subset=["MichiganScore", "OpponentScore"]).reset_index(drop=True)
-    mich_score = 62
-    opp_score = 79
+    mich_score = 59
+    opp_score = 53
     michigami =  not ((unique_ball["MichiganScore"] == mich_score) & (unique_ball["OpponentScore"] == opp_score)).any()
     print(mich_score, opp_score, michigami)
     print(((basketball["MichiganScore"] == mich_score) & (basketball["OpponentScore"] == opp_score)).sum())

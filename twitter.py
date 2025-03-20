@@ -59,8 +59,7 @@ if __name__ == "__main__":
     mich_score = int(sys.argv[1])
     opp_score = int(sys.argv[2])
     opp_name = sys.argv[3]
-    num_times = sys.argv[4]
-    last_date = sys.argv[5]
-    sport = sys.argv[6]
+    num_michigami = sys.argv[4]
+    sport = sys.argv[5]
 
-    not_michigami_tweet(mich_score, opp_score, opp_name, num_times, last_date, sport)
+    michigami_tweet(mich_score, opp_score, opp_name, num_michigami, sport)
