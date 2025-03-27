@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 from twitter import michigami_tweet, not_michigami_tweet
 
 
-def scrape_scores(date, link):
+def scrape_scores(date, link, first_team, first_value, second_team, second_value):
 
     with open("output.txt", "a") as file:
         file.write("Working\n")
@@ -30,20 +30,18 @@ def scrape_scores(date, link):
     date = date
     url = link
     michigan_home = True
-    path_segments = urlparse(url).path.strip("/").split("/")[-1].split("-")
-    opp_name = ""
-    if "michigan" in path_segments[0]:
-        michigan_home = False
-        opp_name = path_segments[1]
-        with open("output.txt", "a") as file:
-            file.write(f"Michigan Away")
-            file.write("\n")
-    elif "michigan" in path_segments[1]:
-        michigan_home = True
-        opp_name = path_segments[0]
-        with open("output.txt", "a") as file:
-            file.write(f"Michigan Home")
-            file.write("\n")
+    opp_name = " "
+    if first_team == "Michigan":
+        opp_name = second_team
+        if first_value == "away":
+            michigan_home = False
+    elif second_team == "Michigan":
+        opp_name = first_team
+        if second_value == "away":
+            michigan_home = False
+    
+    with open("output.txt", "a") as file:
+        file.write(f"{michigan_home}\n {opp_name} \n")
     
     final = False
     michigami = False
@@ -113,15 +111,9 @@ def scrape_scores(date, link):
     connection.close()
     return
 
-def main(date, link):
-    scrape_scores(date, link)
+def main(date, link, first_team, first_value, second_team, second_value):
+    scrape_scores(date, link, first_team, first_value, second_team, second_value)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python script.py <date> <link>")
-        sys.exit(1)
-
-    date_arg = sys.argv[1]
-    link_arg = sys.argv[2]
-    main(date_arg, link_arg)
+    main()
     

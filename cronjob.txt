@@ -1,1 +1,0 @@
-30 11 * * * /usr/bin/python3 /path/to/main.py

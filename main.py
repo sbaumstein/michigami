@@ -46,16 +46,19 @@ def get_api_data():
             data = basketball_response.json()
             next_basketall_date = (data['team']['nextEvent'][0]['competitions'][0]['status']['type']['shortDetail'])
             next_basketball_link = (data["team"]["nextEvent"][0]["links"][0]["href"])
+            first_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["team"]["shortDisplayName"])
+            first_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["homeAway"])
+            second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
+            second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
+
             date_str_with_year = f"{current_year} {next_basketall_date}"
             format_str = "%Y %m/%d - %I:%M %p %Z"
             dt = datetime.strptime(date_str_with_year, format_str)
             #today_date = datetime.now()
             #test_date = today_date.replace(minute=51, second=0)
             game_today = dt.date() == datetime.now().date()
-            game_today = True
-
             if(game_today):
-                scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link], misfire_grace_time=300)
+                scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
                 for job in scheduler.get_jobs():
                     print(job)
         except Exception as e:
@@ -75,8 +78,8 @@ def get_api_data():
     return
 
 
-def run_basketball(dt, link):
-    subprocess.run(["python3", "basketball.py", str(dt), link])
+def run_basketball(dt, link, first_team, first_value, second_team, second_value):
+    subprocess.run(["python3", "basketball.py", str(dt), link, first_team, first_value, second_team, second_value])
     
 def run_foolball(dt, link):
     subprocess.run(["python3", "football.py", str(dt), link])
