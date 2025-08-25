@@ -25,15 +25,25 @@ def get_api_data():
             data = football_response.json()
             next_football_date = (data['team']['nextEvent'][0]['competitions'][0]['status']['type']['shortDetail'])
             next_football_link = (data["team"]["nextEvent"][0]["links"][0]["href"])
+            first_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["team"]["shortDisplayName"])
+            first_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["homeAway"])
+            second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
+            second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])  
+
             date_str_with_year = f"{current_year} {next_football_date}"
             format_str = "%Y %m/%d - %I:%M %p %Z"
             dt = datetime.strptime(date_str_with_year, format_str)
             game_today = dt.date() == datetime.now().date()
 
+            if(game_today):
+                scheduler.add_job(run_football, 'date', run_date=dt, args=[dt, next_football_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
+                for job in scheduler.get_jobs():
+                    print(job)
+
             #if(game_today):
                #scheduler.add_job(run_foolball, 'date', run_date=test_date, args=[dt, next_football_link])
-        except:
-            print("No Football Game Coming Up")
+        except Exception as e:
+            print("No Football Game Coming Up", e)
     else:
         print("Error:", football_response.status_code)
 
