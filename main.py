@@ -59,7 +59,7 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
 
-            dt = parser.parse(f"{current_year} {next_football_date}")
+            dt = parser.parse(f"{current_year} {next_football_date.replace('-', ' ')}")
             game_today = dt.date() == datetime.now().date()
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
                 scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
