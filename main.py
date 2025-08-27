@@ -4,7 +4,7 @@ import sqlite3
 import pandas as pd
 from bs4 import BeautifulSoup
 import re
-from datetime import datetime, timedelta, parser
+from datetime import datetime, timedelta
 import json
 from apscheduler.schedulers.background import BackgroundScheduler
 import subprocess
@@ -64,8 +64,6 @@ def get_api_data():
             date_str_with_year = f"{current_year} {next_basketall_date}"
             format_str = "%Y %-m/%d - %I:%M %p %Z"
             dt = datetime.strptime(date_str_with_year, format_str)
-            #today_date = datetime.now()
-            #test_date = today_date.replace(minute=51, second=0)
             game_today = dt.date() == datetime.now().date()
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
                 scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
