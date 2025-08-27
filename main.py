@@ -31,7 +31,9 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])  
 
-            dt = parser.parse(f"{current_year} {next_football_date}")
+            date_str_with_year = parser.parse(f"{current_year} {next_football_date}")
+            format_str = "%Y %-m/%d - %I:%M %p %Z"
+            dt = datetime.strptime(date_str_with_year, format_str)
             game_today = dt.date() == datetime.now().date()
 
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
@@ -59,14 +61,18 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
 
-            dt = parser.parse(f"{current_year} {next_football_date.replace('-', ' ')}")
+            date_str_with_year = f"{current_year} {next_basketall_date}"
+            format_str = "%Y %-m/%d - %I:%M %p %Z"
+            dt = datetime.strptime(date_str_with_year, format_str)
+            #today_date = datetime.now()
+            #test_date = today_date.replace(minute=51, second=0)
             game_today = dt.date() == datetime.now().date()
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
                 scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
                 for job in scheduler.get_jobs():
                     print(job)
             else:
-                print("No fbasketbll game until", dt)
+                print("No basketbll game until", dt)
         except Exception as e:
             print("Error: No Basketball Game Coming Up", e)
     else:
