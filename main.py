@@ -32,12 +32,9 @@ def get_api_data():
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])  
 
             date_str_with_year = f"{current_year} {next_football_date}"
-            date_str_with_year = date_str_with_year.replace(
-                date_str_with_year.split(" ")[1].split("/")[0],
-                date_str_with_year.split(" ")[1].split("/")[0].zfill(2)
-            )
-            format_str = "%Y %m/%d - %I:%M %p %Z"
-            dt = datetime.strptime(date_str_with_year, format_str)
+            clean_date_str = date_str_with_year.rsplit(" ", 1)[0]
+            format_str = "%Y %m/%d - %I:%M %p"
+            dt = datetime.strptime(clean_date_str, format_str)
             game_today = dt.date() == datetime.now().date()
 
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
@@ -65,13 +62,10 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
 
-            date_str_with_year = f"{current_year} {next_basketall_date}"
-            date_str_with_year = date_str_with_year.replace(
-                date_str_with_year.split(" ")[1].split("/")[0],
-                date_str_with_year.split(" ")[1].split("/")[0].zfill(2)
-            )
-            format_str = "%Y %m/%d - %I:%M %p %Z"
-            dt = datetime.strptime(date_str_with_year, format_str)
+            date_str_with_year = f"{current_year} {next_basketball_date}"
+            clean_date_str = date_str_with_year.rsplit(" ", 1)[0]
+            format_str = "%Y %m/%d - %I:%M %p"
+            dt = datetime.strptime(clean_date_str, format_str)
             game_today = dt.date() == datetime.now().date()
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
                 scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
