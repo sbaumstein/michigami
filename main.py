@@ -31,8 +31,12 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])  
 
-            date_str_with_year = f"{current_year} {next_basketall_date}"
-            format_str = "%Y %-m/%d - %I:%M %p %Z"
+            date_str_with_year = f"{current_year} {next_football_date}"
+            date_str_with_year = date_str_with_year.replace(
+                date_str_with_year.split(" ")[1].split("/")[0],
+                date_str_with_year.split(" ")[1].split("/")[0].zfill(2)
+            )
+            format_str = "%Y %m/%d - %I:%M %p %Z"
             dt = datetime.strptime(date_str_with_year, format_str)
             game_today = dt.date() == datetime.now().date()
 
@@ -62,7 +66,11 @@ def get_api_data():
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
 
             date_str_with_year = f"{current_year} {next_basketall_date}"
-            format_str = "%Y %-m/%d - %I:%M %p %Z"
+            date_str_with_year = date_str_with_year.replace(
+                date_str_with_year.split(" ")[1].split("/")[0],
+                date_str_with_year.split(" ")[1].split("/")[0].zfill(2)
+            )
+            format_str = "%Y %m/%d - %I:%M %p %Z"
             dt = datetime.strptime(date_str_with_year, format_str)
             game_today = dt.date() == datetime.now().date()
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
@@ -93,6 +101,28 @@ def run_basketball(dt, link, first_team, first_value, second_team, second_value)
     
 def run_football(dt, link, first_team, first_value, second_team, second_value):
     subprocess.run(["python3", "football.py", str(dt), link, first_team, first_value, second_team, second_value])
+
+def zero_pad_month_day(date_str):
+    """
+    Input: "2025 8/3 - 7:30 PM EDT" or "2025 11/4 - 7:30 PM EDT"
+    Output: "2025 08/03 - 7:30 PM"
+    """
+    # Split year and rest
+    year, rest = date_str.split(" ", 1)
+
+    # Split month/day and the time part
+    month_day, time_part = rest.split(" - ", 1)
+    month, day = month_day.split("/")
+
+    # Zero-pad month if 1-9
+    month = month.zfill(2) if int(month) < 10 else month
+    # Zero-pad day if 1-9
+    day = day.zfill(2) if int(day) < 10 else day
+
+    # Remove timezone (optional)
+    time_part = time_part.split(" ")[0] + " " + time_part.split(" ")[1]  # keeps HH:MM AM/PM
+
+    return f"{year} {month}/{day} - {time_part}"
     
 
 def main():
