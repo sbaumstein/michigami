@@ -4,7 +4,7 @@ import sqlite3
 import pandas as pd
 from bs4 import BeautifulSoup
 import re
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, parser
 import json
 from apscheduler.schedulers.background import BackgroundScheduler
 import subprocess
@@ -31,18 +31,17 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])  
 
-            date_str_with_year = f"{current_year} {next_football_date}"
-            format_str = "%Y %m/%d - %I:%M %p %Z"
-            dt = datetime.strptime(date_str_with_year, format_str)
+            dt = parser.parse(f"{current_year} {next_football_date}")
             game_today = dt.date() == datetime.now().date()
 
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
                 scheduler.add_job(run_football, 'date', run_date=dt, args=[dt, next_football_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
                 for job in scheduler.get_jobs():
                     print(job)
-
+            else:
+                print("No football game until", dt)
         except Exception as e:
-            print("No Football Game Coming Up", e)
+            print("Error: No Football Game Coming Up", e)
     else:
         print("Error:", football_response.status_code)
 
@@ -60,18 +59,16 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
 
-            date_str_with_year = f"{current_year} {next_basketall_date}"
-            format_str = "%Y %m/%d - %I:%M %p %Z"
-            dt = datetime.strptime(date_str_with_year, format_str)
-            #today_date = datetime.now()
-            #test_date = today_date.replace(minute=51, second=0)
+            dt = parser.parse(f"{current_year} {next_football_date}")
             game_today = dt.date() == datetime.now().date()
             if(game_today and datetime.now() <= dt <= one_hour_from_now):
                 scheduler.add_job(run_basketball, 'date', run_date=dt, args=[dt, next_basketball_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
                 for job in scheduler.get_jobs():
                     print(job)
+            else:
+                print("No fbasketbll game until", dt)
         except Exception as e:
-            print("No Basketball Game Coming Up", e)
+            print("Error: No Basketball Game Coming Up", e)
     else:
         print("Error:", basketball_response.status_code)
     
