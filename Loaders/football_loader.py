@@ -12,7 +12,8 @@ def scrape_historical():
     years = soup.find_all('table')
     year_data = {}
 
-    # 2024 hardcoded data
+    #  hardcoded data
+
     games2024 = {}
 
     game = {
@@ -147,6 +148,37 @@ def scrape_historical():
 
     year_data['2024'] = games2024
 
+    games2025 = {}
+    game = {
+        'opponent_name': "New Mexico",
+        'conference_game': False,
+        'date': '8/30/2025',
+        'michigan_score': '34',
+        'opponent_score': '17',
+        'event_type': 'Regular Season Game'
+    }
+    games2025[game['opponent_name']] = game
+    game = {
+        'opponent_name': "Oklahoma",
+        'conference_game': False,
+        'date': '9/6/2025',
+        'michigan_score': '13',
+        'opponent_score': '24',
+        'event_type': 'Regular Season Game'
+    }
+    games2025[game['opponent_name']] = game
+    game = {
+        'opponent_name': "Central MI",
+        'conference_game': False,
+        'date': '9/13/2025',
+        'michigan_score': '63',
+        'opponent_score': '3',
+        'event_type': 'Regular Season Game'
+    }
+    games2025[game['opponent_name']] = game
+
+    year_data['2025'] = games2025
+
     # scraping all historical data from 1892-2013
     for year in years[1:-2]:
         season = year.find('a').text[:4]
@@ -194,6 +226,7 @@ def load_db(db_file, year_data):
 
     # Insert each game's data into the database
     for season, games in year_data.items():
+        print(season)
         for opponent_name, game_stats in games.items():
             game_date = datetime.strptime(game_stats['date'], "%m/%d/%Y").date()
             try:
@@ -209,7 +242,7 @@ def load_db(db_file, year_data):
                     game_date
                 ))
             except sqlite3.IntegrityError:
-                print(f"Duplicate entry skipped: {game_stats}")
+                continue
 
     connection.commit()
     connection.close()

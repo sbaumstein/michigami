@@ -29,22 +29,22 @@ def get_api_data():
             first_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["team"]["shortDisplayName"])
             first_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["homeAway"])
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
-            second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])  
+            second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])
 
             date_str_with_year = f"{current_year} {next_football_date}"
-            clean_date_str = date_str_with_year.rsplit(" ", 1)[0]
+            clean_date_str = zero_pad_month_day(date_str_with_year)
             format_str = "%Y %m/%d - %I:%M %p"
             dt = datetime.strptime(clean_date_str, format_str)
             game_today = dt.date() == datetime.now().date()
 
-            if game_today and dt.year == datetime.now().year and dt.month == datetime.now().month and dt.day == datetime.now().day and dt.hour == datetime.now().hour:
+            if game_today and (dt - datetime.now()).seconds < 3600:
                 scheduler.add_job(run_football, 'date', run_date=dt, args=[dt, next_football_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
                 for job in scheduler.get_jobs():
                     print(job)
             else:
-                print("No football game until", dt)
+                print(f"No football game this hour (), next game at: ", dt)
         except Exception as e:
-            print("Error: No Football Game Coming Up", e)
+            print("Error: No football Game Coming Up", e)
     else:
         print("Error:", football_response.status_code)
 
@@ -63,25 +63,25 @@ def get_api_data():
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
 
             date_str_with_year = f"{current_year} {next_basketball_date}"
-            clean_date_str = date_str_with_year.rsplit(" ", 1)[0]
+            clean_date_str = zero_pad_month_day(date_str_with_year)
             format_str = "%Y %m/%d - %I:%M %p"
             dt = datetime.strptime(clean_date_str, format_str)
             game_today = dt.date() == datetime.now().date()
-            if game_today and dt.year == datetime.now().year and dt.month == datetime.now().month and dt.day == datetime.now().day and dt.hour == datetime.now().hour:
+            if game_today and (dt - datetime.now()).seconds < 3600:
                 scheduler.add_job(
-                    run_football,
+                    run_basketball,
                     'date',
                     run_date=dt,
-                    args=[dt, next_football_link, first_team, first_value, second_team, second_value],
+                    args=[dt, next_basketball_link, first_team, first_value, second_team, second_value],
                     misfire_grace_time=300
                 )
                 for job in scheduler.get_jobs():
                     print(job)
             else:
-                print("No football game this hour (next game at", dt, ")")
+                print("No basketball game this hour (next game at", dt, ")")
                 
         except Exception as e:
-            print("Error: No Basketball Game Coming Up", e)
+            print("Error: No basketball Game Coming Up", e)
     else:
         print("Error:", basketball_response.status_code)
     
