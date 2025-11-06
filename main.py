@@ -1,11 +1,8 @@
 import time
 import requests
-import sqlite3
 import pandas as pd
 from bs4 import BeautifulSoup
-import re
-from datetime import datetime, timedelta
-import json
+from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 import subprocess
 
@@ -15,8 +12,6 @@ def get_api_data():
     scheduler = BackgroundScheduler()
     scheduler.remove_all_jobs()
     current_year = datetime.now().year
-    one_hour_from_now = datetime.now() + timedelta(hours=1)
-
     michigan_football_api = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/teams/130"
     football_response = requests.get(michigan_football_api)
     next_football_date = ""
@@ -31,13 +26,12 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])
 
-            date_str_with_year = f"{current_year} {next_football_date}"
-            clean_date_str = zero_pad_month_day(date_str_with_year)
-            format_str = "%Y %m/%d - %I:%M %p"
-            dt = datetime.strptime(clean_date_str, format_str)
+            format_str = '%Y-%m-%d %H:%M:%S'
+            dt = datetime.strptime(next_football_date, format_str)
             game_today = dt.date() == datetime.now().date()
+            sec_difference = (dt - datetime.now()).seconds
 
-            if game_today and (dt - datetime.now()).seconds < 3600:
+            if game_today and sec_difference < 3600:
                 scheduler.add_job(run_football, 'date', run_date=dt, args=[dt, next_football_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
                 for job in scheduler.get_jobs():
                     print(job)
@@ -55,7 +49,7 @@ def get_api_data():
     if basketball_response.status_code == 200:
         try:
             data = basketball_response.json()
-            next_basketall_date = (data['team']['nextEvent'][0]['competitions'][0]['status']['type']['shortDetail'])
+            next_basketball_date = (data['team']['nextEvent'][0]['competitions'][0]['status']['type']['shortDetail'])
             next_basketball_link = (data["team"]["nextEvent"][0]["links"][0]["href"])
             first_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["team"]["shortDisplayName"])
             first_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][0]["homeAway"])
@@ -67,7 +61,8 @@ def get_api_data():
             format_str = "%Y %m/%d - %I:%M %p"
             dt = datetime.strptime(clean_date_str, format_str)
             game_today = dt.date() == datetime.now().date()
-            if game_today and (dt - datetime.now()).seconds < 3600:
+            sec_difference = (dt - datetime.now()).seconds
+            if game_today and sec_difference < 3600:
                 scheduler.add_job(
                     run_basketball,
                     'date',
