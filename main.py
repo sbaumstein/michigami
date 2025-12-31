@@ -6,6 +6,7 @@ from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 import subprocess
 from dateutil import parser
+from zoneinfo import ZoneInfo
 
 
 def get_api_data():
@@ -28,9 +29,11 @@ def get_api_data():
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])
 
             dt = parser.parse(next_football_date)
-            dt = dt.replace(tzinfo=None)
-            game_today = dt.date() == datetime.now().date()
-            sec_difference = int((dt - datetime.now()).total_seconds())
+            import pdb; pdb.set_trace()
+            dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
+            now = datetime.now(ZoneInfo("America/New_York"))
+            game_today = dt.date() == now.date()
+            sec_difference = int((dt - now).total_seconds())
 
             if game_today and sec_difference < 3600:
                 scheduler.add_job(run_football, 'date', run_date=dt, args=[dt, next_football_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
@@ -60,9 +63,10 @@ def get_api_data():
             date_str_with_year = f"{current_year} {next_basketball_date}"
             clean_date_str = zero_pad_month_day(date_str_with_year)
             dt = parser.parse(clean_date_str)
-            dt = dt.replace(tzinfo=None)
-            game_today = dt.date() == datetime.now().date()
-            sec_difference = int((dt - datetime.now()).total_seconds())
+            dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
+            now = datetime.now(ZoneInfo("America/New_York"))
+            game_today = dt.date() == now.date()
+            sec_difference = int((dt - now).total_seconds())
             if game_today and sec_difference < 3600:
                 scheduler.add_job(
                     run_basketball,
