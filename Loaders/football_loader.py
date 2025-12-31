@@ -237,6 +237,36 @@ def scrape_historical():
     }
     games2025[game['opponent_name']] = game
 
+    game = {
+        'opponent_name': "Northwestern",
+        'conference_game': True,
+        'date': '11/15/2025',
+        'michigan_score': '24',
+        'opponent_score': '22',
+        'event_type': 'Regular Season Game'
+    }
+    games2025[game['opponent_name']] = game
+
+    game = {
+        'opponent_name': "Maryland",
+        'conference_game': True,
+        'date': '11/22/2025',
+        'michigan_score': '45',
+        'opponent_score': '20',
+        'event_type': 'Regular Season Game'
+    }
+    games2025[game['opponent_name']] = game
+
+    game = {
+        'opponent_name': "Ohio State",
+        'conference_game': True,
+        'date': '11/29/2025',
+        'michigan_score': '9',
+        'opponent_score': '27',
+        'event_type': 'Regular Season Game'
+    }
+    games2025[game['opponent_name']] = game
+
     year_data['2025'] = games2025
 
     # scraping all historical data from 1892-2013

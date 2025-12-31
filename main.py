@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 import subprocess
+from dateutil import parser
 
 
 def get_api_data():
@@ -26,10 +27,10 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])
 
-            format_str = '%Y-%m-%d %H:%M:%S'
-            dt = datetime.strptime(next_football_date, format_str)
+            dt = parser.parse(next_football_date)
+            dt = dt.replace(tzinfo=None)
             game_today = dt.date() == datetime.now().date()
-            sec_difference = (dt - datetime.now()).seconds
+            sec_difference = int((dt - datetime.now()).total_seconds())
 
             if game_today and sec_difference < 3600:
                 scheduler.add_job(run_football, 'date', run_date=dt, args=[dt, next_football_link, first_team, first_value, second_team, second_value], misfire_grace_time=300)
@@ -58,10 +59,10 @@ def get_api_data():
 
             date_str_with_year = f"{current_year} {next_basketball_date}"
             clean_date_str = zero_pad_month_day(date_str_with_year)
-            format_str = "%Y %m/%d - %I:%M %p"
-            dt = datetime.strptime(clean_date_str, format_str)
+            dt = parser.parse(clean_date_str)
+            dt = dt.replace(tzinfo=None)
             game_today = dt.date() == datetime.now().date()
-            sec_difference = (dt - datetime.now()).seconds
+            sec_difference = int((dt - datetime.now()).total_seconds())
             if game_today and sec_difference < 3600:
                 scheduler.add_job(
                     run_basketball,
