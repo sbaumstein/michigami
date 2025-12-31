@@ -29,7 +29,6 @@ def get_api_data():
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])
 
             dt = parser.parse(next_football_date)
-            import pdb; pdb.set_trace()
             dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
             now = datetime.now(ZoneInfo("America/New_York"))
             game_today = dt.date() == now.date()
