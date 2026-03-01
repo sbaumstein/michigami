@@ -267,6 +267,16 @@ def scrape_historical():
     }
     games2025[game['opponent_name']] = game
 
+    game = {
+        'opponent_name': "Texas",
+        'conference_game': True,
+        'date': '12/31/2025',
+        'michigan_score': '27',
+        'opponent_score': '41',
+        'event_type': 'Citrus Bowl'
+    }
+    games2025[game['opponent_name']] = game
+
     year_data['2025'] = games2025
 
     # scraping all historical data from 1892-2013

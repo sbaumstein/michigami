@@ -28,7 +28,7 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])
 
-            dt = parser.parse(next_football_date)
+            dt = parse_espn_shortdetail(next_football_date, current_year)
             dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
             now = datetime.now(ZoneInfo("America/New_York"))
             game_today = dt.date() == now.date()
@@ -59,9 +59,7 @@ def get_api_data():
             second_team = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["team"]["shortDisplayName"])
             second_value = (data["team"]["nextEvent"][0]["competitions"][0]["competitors"][1]["homeAway"])                
 
-            date_str_with_year = f"{current_year} {next_basketball_date}"
-            clean_date_str = zero_pad_month_day(date_str_with_year)
-            dt = parser.parse(clean_date_str)
+            dt = parse_espn_shortdetail(next_basketball_date, current_year)
             dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
             now = datetime.now(ZoneInfo("America/New_York"))
             game_today = dt.date() == now.date()
@@ -102,27 +100,41 @@ def run_basketball(dt, link, first_team, first_value, second_team, second_value)
 def run_football(dt, link, first_team, first_value, second_team, second_value):
     subprocess.run(["python3", "football.py", str(dt), link, first_team, first_value, second_team, second_value])
 
-def zero_pad_month_day(date_str):
+def parse_espn_shortdetail(date_str, current_year):
     """
-    Input: "2025 8/3 - 7:30 PM EDT" or "2025 11/4 - 7:30 PM EDT"
-    Output: "2025 08/03 - 7:30 PM"
+    Parse ESPN shortDetail strings into a datetime, handling many formats:
+      - "3/1 - 7:30 PM EST"          (basketball M/D style)
+      - "11/04 - 7:30 PM EDT"        (zero-padded)
+      - "Sat, March 1 at 7:30 PM"    (football verbose)
+      - "2026-03-01T23:30Z"          (ISO)
+    Raises ValueError for non-schedulable statuses like "In Progress", "Final", "TBD".
     """
-    # Split year and rest
-    year, rest = date_str.split(" ", 1)
+    NON_DATE_STATUSES = {
+        "in progress", "final", "tbd", "postponed",
+        "cancelled", "canceled", "halftime", "end of period",
+    }
+    clean = date_str.strip()
+    if clean.lower() in NON_DATE_STATUSES:
+        raise ValueError(f"Game status, not a schedulable time: {clean!r}")
 
-    # Split month/day and the time part
-    month_day, time_part = rest.split(" - ", 1)
-    month, day = month_day.split("/")
+    # Strategy 1: "M/D - H:MM AM/PM [TZ]" — replace " - " with space, prepend year
+    if " - " in clean:
+        date_part, time_part = clean.split(" - ", 1)
+        time_tokens = time_part.strip().split()
+        clean_time = " ".join(time_tokens[:2])  # keep "H:MM AM/PM", drop TZ abbreviation
+        try:
+            return parser.parse(f"{current_year}/{date_part} {clean_time}")
+        except Exception:
+            pass
 
-    # Zero-pad month if 1-9
-    month = month.zfill(2) if int(month) < 10 else month
-    # Zero-pad day if 1-9
-    day = day.zfill(2) if int(day) < 10 else day
+    # Strategy 2: direct parse (ISO strings, verbose football formats)
+    try:
+        return parser.parse(clean)
+    except Exception:
+        pass
 
-    # Remove timezone (optional)
-    time_part = time_part.split(" ")[0] + " " + time_part.split(" ")[1]  # keeps HH:MM AM/PM
-
-    return f"{year} {month}/{day} - {time_part}"
+    # Strategy 3: fuzzy parse with year prepended (catches remaining edge cases)
+    return parser.parse(f"{current_year} {clean}", fuzzy=True)
     
 
 def main():
